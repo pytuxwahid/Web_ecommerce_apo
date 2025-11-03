@@ -1,6 +1,36 @@
-@Ecommerce_web_api_HostAddress = http://localhost:5247
 
-GET {{Ecommerce_web_api_HostAddress}}/weatherforecast/
-Accept: application/json
+Get http://localhost:5247
 
 ###
+
+GET http://localhost:5247/v1/api/categories
+
+###
+GET http://localhost:5247/v1/api/categories/44b2850c-3fe0-435d-8d5e-99a9374db93d
+
+###
+
+POST http://localhost:5247/v1/api/categories/
+Content-Type: application/json
+
+{
+    "name": "Home & Kitchen",
+    "description": "Products related to home and kitchen" 
+   
+  
+}
+
+
+
+###
+
+PUT http://localhost:5247/v1/api/categories/44b2850c-3fe0-435d-8d5e-99a9374db93d
+Content-Type: application/json
+
+{
+  "name":"Furniture",
+  "description":"chairs, tables, beds, sofas"
+}
+###
+
+DELETE http://localhost:5247/v1/api/categories/44b2850c-3fe0-435d-8d5e-99a9374db93d
